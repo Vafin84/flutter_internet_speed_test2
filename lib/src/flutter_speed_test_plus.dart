@@ -173,5 +173,11 @@ class FlutterInternetSpeedTest {
     return await FlutterInternetSpeedTestPlatform.instance.cancelTest();
   }
 
+  Future<bool> closeTest() async {
+    _isCancelled = false;
+    _isTestInProgress = false;
+    return;
+  }
+
   bool get isLogEnabled => FlutterInternetSpeedTestPlatform.instance.logEnabled;
 }
